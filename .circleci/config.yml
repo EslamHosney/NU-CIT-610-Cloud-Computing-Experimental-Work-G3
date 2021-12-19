@@ -338,16 +338,16 @@ workflows:
                 only: [main]
               
       - deploy-infrastructure:
-            #requires: [build-image]
+            requires: [build-image]
             filters:
               branches:
-                only: [buff]  
+                only: [main]  
                 
       - configure-infrastructure:
             requires: [deploy-infrastructure]
             filters:
               branches:
-                only: [main]
+                only: [buff]
 
       - smoke-test:
             requires: [configure-infrastructure]
