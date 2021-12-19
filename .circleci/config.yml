@@ -151,7 +151,7 @@ jobs:
               #docker push CircleCI-Public/circleci-demo-docker:$TAG
               docker build --tag=eslamhosney/udacity_devops_engineer_capstone:latest .
               echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin
-              docker push eslamhosney/NU-CIT-610-Cloud-Computing-Experimental-Work-G3:latest
+              docker push eslamhosney/nu-cit-610-cloud-computing-experimental-work-g3:latest
 
 #################################################          
   deploy-infrastructure:
