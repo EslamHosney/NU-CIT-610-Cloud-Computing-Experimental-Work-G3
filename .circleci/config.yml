@@ -169,7 +169,7 @@ jobs:
           command: |
             aws cloudformation deploy \
               --template-file .circleci/files/backend.yml \
-              --tags project=Udacity-DevOps-Capstone \
+              --tags project=NU-CIT-610-Cloud-Computing-Experimental-Work-G3 \
               --stack-name "back-end-${CIRCLE_WORKFLOW_ID:0:7}" \
               --parameter-overrides ID="${CIRCLE_WORKFLOW_ID:0:7}"  
               #exit 1
