@@ -125,5 +125,13 @@ venv.bak/
 .dmypy.json
 dmypy.json
 
+
 # Pyre type checker
 .pyre/
+
+#localignore
+secrets.txt
+NU-CIT-610-Cloud-Computing-Experimental-Work-G3_user_credentials.csv
+*.pem
+
+

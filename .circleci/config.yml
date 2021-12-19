@@ -202,7 +202,7 @@ jobs:
       # Add ssh keys with fingerprint again
       - add_ssh_keys:
           fingerprints:
-              - "ef:0b:d2:7e:77:81:a1:a5:41:c2:ca:08:4c:15:11:ae"
+              - "1d:fb:c4:f5:b3:8d:22:b8:94:c0:28:9f:04:10:83:01"
       # attach workspace
       - attach_workspace:
             at: ~/project
@@ -228,17 +228,7 @@ jobs:
             cat inventory.txt
             #cat configure-server.yml
       # Here's where you will add some code to rollback on failure  
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
+#################################################    
       
   smoke-test:
     docker:
@@ -312,7 +302,7 @@ jobs:
                       fi
                   fi
               done
-
+#################################################
 
 workflows:
   default:
@@ -320,38 +310,38 @@ workflows:
       - print-workflow-id:
             filters:
               branches:
-                only: [dev]
+                only: [main]
       - lint-Python:
             requires: [print-workflow-id]
             filters:
               branches:
-                only: [dev]
+                only: [main]
       - lint-Dockerfile:
             requires: [print-workflow-id]
             filters:
               branches:
-                only: [dev]
+                only: [main]
       - test-app:
             requires: [lint-Python, lint-Dockerfile]
             filters:
               branches:
-                only: [dev]
+                only: [main]
       - security-app:
             requires: [test-app]
             filters:
               branches:
-                only: [dev] 
+                only: [main] 
       - build-image:
             requires: [security-app]
             filters:
               branches:
-                only: [dev]
+                only: [main]
               
       - deploy-infrastructure:
             #requires: [build-image]
             filters:
               branches:
-                only: [main]  
+                only: [buff]  
                 
       - configure-infrastructure:
             requires: [deploy-infrastructure]
