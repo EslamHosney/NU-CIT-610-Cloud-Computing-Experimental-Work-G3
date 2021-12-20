@@ -351,13 +351,13 @@ workflows:
             requires: [deploy-infrastructure]
             filters:
               branches:
-                only: [buff]
+                only: [main]
 
       - smoke-test:
             requires: [configure-infrastructure]
             filters:
               branches:
-                only: [main]   
+                only: [buff]   
       - cleanup:
             requires: [smoke-test]
             filters:
