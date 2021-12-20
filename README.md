@@ -6,21 +6,19 @@ Created for Experimental Work for Nile University Group 3
 
 ## Abstract
 This simple python code is used to illustrate the main ideas for DevOps and cloud native applicaitons.
-I used CircleCI for my pipeline which follow the below steps (all screenshots could be found in Udacity-DevOps-Engineer-Capstone SC.pdf)
-the project has 2 braches 
-dev
-where all teh changes related to teh code and scanning are initiatted
+I used CircleCI for my pipeline which follow the below steps (all screenshots could be found in NU-CIT-610-Cloud-Computing-Experimental-Work-G3.pdf)
+where all the changes related to teh code and scanning are initiatted
 main
 for the delpoyment
 
 ## Lint code
-the first step of the pipeline is to check the code syntax which is done by pylint
+The first step of the pipeline is to check the code syntax which is done by pylint
 
 ## Lint Docker
 Then check the docker file for any typos by hadolint
 
 ## Test App
-The i used pytest to test the flask app I am running
+Then I used pytest to test the flask app I am running
 
 ## Security test
 Used bandit to scan my python code for vulnerabilities
@@ -32,7 +30,7 @@ After all the tests are complete I used CircleCI to build my container image and
 Using the cloudformation power I created the required server to run my application in prod
 
 ## Configure Infra
-Using Ansible i confiured minikube and Kubectl to run my application inside a Kubernetes cluster
+Using Ansible I insatlled and confgured Docker to run my application in a container
 
 ## Smoke test
 Finalling using curl to the new server services. 
