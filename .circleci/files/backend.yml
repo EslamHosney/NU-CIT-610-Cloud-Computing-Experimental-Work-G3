@@ -1,5 +1,5 @@
 Description: >
-  Udacity-DevOps-Capstone.
+  NU-CIT-610-Cloud-Computing-Experimental-Work-G3
 
 Parameters:
   ID:
@@ -41,4 +41,4 @@ Resources:
         - Key: mark
           Value: udacity-devops-backend    
         - Key: scope
-          Value: Eslam-Udacity-DevOps-Engineer-Capstone
+          Value: NU-CIT-610-Cloud-Computing-Experimental-Work-G3

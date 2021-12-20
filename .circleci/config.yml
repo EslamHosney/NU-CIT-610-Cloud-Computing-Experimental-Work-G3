@@ -2,7 +2,6 @@
 # See: https://circleci.com/docs/2.0/configuration-reference
 version: 2.1
 
-
 commands:
   destroy-environment:
     description: Destroy Udacity-DevOps-Engineer-Capstone cloudformation stacks given a workflow ID.
@@ -17,6 +16,7 @@ commands:
           command: |
             echo "Destroying environment udapeople-${CIRCLE_WORKFLOW_ID:0:7}"
             #aws cloudformation delete-stack --stack-name back-end-${CIRCLE_WORKFLOW_ID:0:7}
+
 
   print_pipeline_id:
     description: "A very simple command to print workflow ID"
@@ -296,7 +296,7 @@ jobs:
                       echo "New Stack Don't delete"
                       echo "$stack"
                     else
-                      if [[ "$stack" == *"-Udacity-"* ]]; then
+                      if [[ "$stack" == *"-end-"* ]]; then
                         echo "Old Stack to be deleted"
                         echo "$stack"
                         export OldWorkflowID=${stack##*-}
@@ -315,7 +315,7 @@ workflows:
       - print-workflow-id:
             filters:
               branches:
-                only: [main]
+                only: [buff]
       - lint-Python:
             requires: [print-workflow-id]
             filters:
@@ -343,7 +343,7 @@ workflows:
                 only: [main]
               
       - deploy-infrastructure:
-            requires: [build-image]
+            #requires: [build-image]
             filters:
               branches:
                 only: [main]  
