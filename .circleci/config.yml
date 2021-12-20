@@ -212,7 +212,7 @@ jobs:
             apk add --update tar gzip ansible nodejs npm curl
             pip install awscli
       - run:
-          name: Set up inventory file
+          name: Get Backend IP to inventory
           command: |
             cd .circleci/ansible
             BACKEND_IP=$(aws ec2 describe-instances \
