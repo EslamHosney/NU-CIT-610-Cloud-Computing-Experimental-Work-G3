@@ -341,7 +341,7 @@ workflows:
             requires: [build-image]
             filters:
               branches:
-                only: [main]  
+                only: [buff]  
                 
       - configure-infrastructure:
             requires: [deploy-infrastructure]
