@@ -45,7 +45,7 @@
   - name: "Docker Run"
     shell: |
         docker pull eslamhosney/udacity_devops_engineer_capstone:latest
-        docker run -p 8000:80 eslamhosney/udacity_devops_engineer_capstone:latest  
+        docker run -d -p 8000:80 eslamhosney/udacity_devops_engineer_capstone:latest  
         #kubectl run udacity-devops-engineer-capstone-deploy --image=eslamhosney/udacity_devops_engineer_capstone --port=80 --labels app=udacity-devops-engineer-capstone-deploy
         #kubectl create deployment udacity-devops-engineer-capstone-deploy2 --image=eslamhosney/udacity_devops_engineer_capstone 
     register: print_result
