@@ -183,7 +183,7 @@ jobs:
               --filters "Name=tag:Name,Values=backend-${CIRCLE_WORKFLOW_ID:0:7}" \
               --output=text)
             echo $backendip >> .circleci/ansible/inventory.txt
-            curl -H "Content-Type: text/plain" -H "token: a6799e5b-dcb5-45f6-b3f3-6cb9db85f3ac" --request PUT --data $backendip https://api.memstash.io/values/backendip
+            #curl -H "Content-Type: text/plain" -H "token: a6799e5b-dcb5-45f6-b3f3-6cb9db85f3ac" --request PUT --data $backendip https://api.memstash.io/values/backendip
             cat .circleci/ansible/inventory.txt
             # exit 1
       - persist_to_workspace:
@@ -215,8 +215,12 @@ jobs:
           name: Set up inventory file
           command: |
             cd .circleci/ansible
-            URLS=$(curl -H "token: a6799e5b-dcb5-45f6-b3f3-6cb9db85f3ac" --request GET https://api.memstash.io/values/backendip)
-            echo "$URLS" >> inventory.txt
+            BACKEND_IP=$(aws ec2 describe-instances \
+              --query "Reservations[*].Instances[*].PublicIpAddress" \
+              --filters "Name=tag:Name,Values=backend-${CIRCLE_WORKFLOW_ID:0:7}" \
+              --output=text)
+            #URLS=$(curl -H "token: a6799e5b-dcb5-45f6-b3f3-6cb9db85f3ac" --request GET https://api.memstash.io/values/backendip)
+            echo "$BACKEND_IP" >> inventory.txt
             cat inventory.txt
       - run:
           name: Configure server with ansible

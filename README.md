@@ -2,7 +2,7 @@
 Created for Experimental Work for Nile University Group 3
 
 ## CircleCI
-[![CircleCI](https://circleci.com/gh/EslamHosney/Udacity-DevOps-Engineer-Capstone/tree/main.svg?style=svg)](https://circleci.com/gh/EslamHosney/Udacity-DevOps-Engineer-Capstone/tree/main)
+[![CircleCI](https://circleci.com/gh/EslamHosney/NU-CIT-610-Cloud-Computing-Experimental-Work-G3/tree/main.svg?style=svg)](https://circleci.com/gh/EslamHosney/NU-CIT-610-Cloud-Computing-Experimental-Work-G3/tree/main)
 
 ## Abstract
 This simple python code is used to illustrate the main ideas for DevOps and cloud native applicaitons.
