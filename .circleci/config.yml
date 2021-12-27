@@ -315,7 +315,7 @@ workflows:
       - print-workflow-id:
             filters:
               branches:
-                only: [buff]
+                only: [main]
       - lint-Python:
             requires: [print-workflow-id]
             filters:
