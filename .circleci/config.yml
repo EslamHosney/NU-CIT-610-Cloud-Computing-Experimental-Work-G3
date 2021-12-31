@@ -322,7 +322,7 @@ workflows:
               branches:
                 only: [main]
       - lint-Dockerfile:
-            requires: [print-workflow-id]
+            # requires: [print-workflow-id]
             filters:
               branches:
                 only: [main]
