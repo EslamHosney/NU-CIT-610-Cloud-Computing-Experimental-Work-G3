@@ -38,4 +38,4 @@ I created an testing scenario to make sure the new infra is working fine or dele
 In case it fails it will delete the new infrastructure to save cost
 
 ## Clean up
-Automatically deleting the old infra to save cost
+Automatically deleting the old infra to save cost.
