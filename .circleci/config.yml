@@ -149,9 +149,9 @@ jobs:
               TAG=0.1.$CIRCLE_BUILD_NUM
               #docker build -t CircleCI-Public/circleci-demo-docker:$TAG .
               #docker push CircleCI-Public/circleci-demo-docker:$TAG
-              docker build --tag=eslamhosney/nu-cit-610-cloud-computing-experimental-work-g3:latest .
+              docker build --tag=eslamhosney/nu-cit-610-cloud-computing-experimental-work-g3:latest2 .
               echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin
-              docker push eslamhosney/nu-cit-610-cloud-computing-experimental-work-g3:latest
+              docker push eslamhosney/nu-cit-610-cloud-computing-experimental-work-g3:latest2
 
 #################################################          
   deploy-infrastructure:
