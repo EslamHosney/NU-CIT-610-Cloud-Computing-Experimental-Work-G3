@@ -12,7 +12,7 @@ def hello_world():
 def hello_eslam():
     response = requests.get('https://api.coindesk.com/v1/bpi/currentprice.json')
     data = response.json()
-    btcValue = "<h1> Again BTC price "+data["bpi"]["USD"]["rate"]+" USD </h1>"
+    btcValue = "<h1> Aga BTC price "+data["bpi"]["USD"]["rate"]+" USD </h1>"
     btcValue = "Hello Here"
     return btcValue
 
